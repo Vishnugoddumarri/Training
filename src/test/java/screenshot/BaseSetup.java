@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class BaseSetup {
+    
+    //Base setup to launch browsers
     public static WebDriver driver;
     public Utils FileUtils;
     public static void initialization(){
