@@ -1,10 +1,13 @@
-package screenshot;
+package utils;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class SampleListener extends BaseSetup implements ITestListener {
+
+
+
+public class Listeners extends Utility implements ITestListener {
     public void onTestStart(ITestResult iTestResult) {
 
     }
@@ -14,8 +17,8 @@ public class SampleListener extends BaseSetup implements ITestListener {
     }
 
     public void onTestFailure(ITestResult iTestResult) {
-      System.out.println("Failed Test");
-      failed(iTestResult.getMethod().getMethodName());
+        System.out.println("Failed Test");
+        screenshotClick();
     }
 
     public void onTestSkipped(ITestResult iTestResult) {
