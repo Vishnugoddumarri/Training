@@ -8,11 +8,13 @@ import org.testng.ITestResult;
 
 
 public class Listeners extends Utility implements ITestListener {
-    public void onTestStart(ITestResult iTestResult) {
+    public void onTestStart(ITestResult result) {
+        System.out.println(result.getName()+" test case started");
 
     }
 
-    public void onTestSuccess(ITestResult iTestResult) {
+    public void onTestSuccess(ITestResult result) {
+        System.out.println("The name of the testcase passed is :"+result.getName());
 
     }
 

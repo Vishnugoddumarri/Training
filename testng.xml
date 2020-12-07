@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+    </listeners>
+    <listeners>
+        <listener class-name="utils.Listeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/vishnu/IdeaProjects/SwagLabs_Advanced">
+    </test>
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="testSetup.TestClass">
+
+                <methods>
+                    <include name="testSwagLabs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
