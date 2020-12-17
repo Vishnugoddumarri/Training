@@ -1,11 +1,11 @@
-package testSetup;
+package testSetupSwagLabs;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import pages.*;
+import pagesSwagLabs.*;
 import utils.BaseSetup;
 
 public class TestClass extends BaseSetup {
@@ -23,7 +23,7 @@ public class TestClass extends BaseSetup {
         @Test
         public void testSwagLabs(){
             //LoginPage actions
-            LoginPage login =PageFactory.initElements(driver,LoginPage.class);
+            LoginPage login =PageFactory.initElements(driver, LoginPage.class);
             login.loginPage(user, password);
 
             //Test Title
